@@ -1,0 +1,7 @@
+#!/bin/sh
+../pb/bin/protoc -I=./pb_src --cpp_out=./pb_dst ./pb_src/Ingenic.Potato.Demo.People.proto
+g++ server.cc pb_dst/Ingenic.Potato.Demo.People.pb.cc -o server -I../pb/include/ -L../pb/lib/ -lprotobuf -std=c++11 -pthread
+g++ client.cc pb_dst/Ingenic.Potato.Demo.People.pb.cc -o client -I../pb/include/ -L../pb/lib/ -lprotobuf -std=c++11 -pthread
+
+g++ server.c -o server -L./out/lib/glibc/ -lPb.Ingenic.Potato.Demo.People -L../../pb/lib/ -lprotobuf -Wall -std=c++11 -pthread
+g++ client.c -o client -L./out/lib/glibc/ -lPb.Ingenic.Potato.Demo.People -L../../pb/lib/ -lprotobuf -Wall -std=c++11 -pthread

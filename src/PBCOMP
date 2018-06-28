@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Genarate *.cc & *.h from *.proto"
+../pb/bin/protoc -I=./pb_src --cpp_out=./pb_dst ./pb_src/*.proto

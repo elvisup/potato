@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package sputnik.pb;
+
+import "face_attribute.proto";
+import "plate_attribute.proto";
+import "vehicle_attribute.proto";
+import "human_attribute.proto";
+import "trace_point.proto";
+
+message Cluster {
+  int32 cluster_id = 1;
+
+  repeated int32 face_track_ids = 2;
+  repeated int32 human_track_ids = 3;
+  repeated int32 vehicle_track_ids = 4;
+  repeated int32 plate_track_ids = 5;
+
+  FaceAttribute face_attribute = 6;
+  PlateAttribute plate_attribute = 7;
+  VehicleAttribute vehicle_attribute = 8;
+  HumanAttribute human_attribute = 9;
+
+  repeated TracePoint face_trace = 10;
+  repeated TracePoint human_trace = 11;
+  repeated TracePoint vehicle_trace = 12;
+  repeated TracePoint plate_trace = 13;
+};

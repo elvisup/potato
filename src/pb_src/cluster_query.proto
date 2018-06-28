@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package sputnik.pb;
+
+enum ClusterQueryType {
+  BY_CLUSTER_ID = 0;
+  BY_TRACK_ID = 1;
+  SYNC_ALL = 2;
+}
+
+message ClusterQuery {
+  ClusterQueryType type = 1;
+  repeated int32 cluster_ids = 2;
+  repeated int32 track_ids = 3;
+};

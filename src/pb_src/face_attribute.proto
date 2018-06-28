@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package sputnik.pb;
+
+message FaceLandMark {
+  string landmark_description = 1;
+  int32 lefteye_pupil_x = 2;
+  int32 lefteye_pupil_y = 3;
+  int32 righteye_pupil_x = 4;
+  int32 righteye_pupil_y = 5;
+  int32 nose_tip_x = 6;
+  int32 nose_tip_y = 7;
+  int32 left_mouth_corner_x = 8;
+  int32 left_mouth_corner_y = 9;
+  int32 right_mouth_corner_x = 10;
+  int32 right_mouth_corner_y = 11;
+  int32 lefteye_right_corner_x = 12;
+  int32 lefteye_right_corner_y = 13;
+  int32 righteye_left_corner_x = 14;
+  int32 righteye_left_corner_y = 15;
+}
+
+message FaceAttribute {
+  // [0, 100]. 100 means very blur, 0 means very clear.
+  int32 blur = 1;
+
+  // Age in years.
+  int32 age = 2;
+
+  // [0, 100]. 100 for female, 0 for male.
+  int32 gender = 3;
+
+  // 100 * radian.
+  sint32 pitch = 4;
+
+  // 100 * radian.
+  sint32 yaw = 5;
+
+  // 100 * radian.
+  sint32 roll = 6;
+
+  // [0, 100]. 100 means unlikely to be a face. 0 means likely to be a face.
+  int32 post_filter_score = 7;
+
+  // [0, 100]. Relative position in pixels.
+  FaceLandMark landmark = 8;
+
+  // [0, 100]. 100 means very likely being a minority.
+  int32 minority = 9;
+}
+

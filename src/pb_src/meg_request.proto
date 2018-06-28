@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package sputnik.pb;
+
+import "face_request.proto";
+import "token_request.proto";
+
+message MegRequest {
+  int32 request_id = 1;
+  oneof request {
+    TokenActivationRequest token_activation_request = 2;
+    DeleteTokenRequest delete_token_request = 3;
+    FaceRequest face_request = 4;
+  }
+  int64 timestamp_millis = 8;
+}

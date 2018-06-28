@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package sputnik.pb;
+
+import "cluster_reply.proto";
+
+message MetaReply {
+  int32 post_id = 1;
+  oneof reply {
+    ClusterReply cluster_reply = 2;
+  }
+  int64 timestamp_millis = 3;
+};

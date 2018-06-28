@@ -1,0 +1,3 @@
+#!/bin/sh
+g++ client.c -o client -L../out/lib/glibc/ -lPb.Ingenic.Potato.Demo.People -L../../../pb/lib/ -lprotobuf -Wall -std=c++11 -pthread
+g++ server.c -o server -L../out/lib/glibc/ -lPb.Ingenic.Potato.Demo.People -L../../../pb/lib/ -lprotobuf -Wall -std=c++11 -pthread

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package sputnik.pb;
+
+enum TokenActivationReplyStatus {
+  TAR_UNKNOWN = 0;
+  TAR_SUCCESS = 1;
+  TAR_FAILED = 2;
+}
+
+message TokenActivationReply {
+  TokenActivationReplyStatus status = 1;
+  repeated int32 active_tokens = 2; // Tokens that are active.
+}
+
+enum DeleteTokenReplyStatus {
+  DFT_UNKNOWN = 0;
+  DFT_SUCCESS = 1;
+  DFT_FAILED = 2;
+}
+
+message DeleteTokenReply {
+  DeleteTokenReplyStatus status = 1;
+  repeated int32 present_tokens = 2; // #Tokens that are still present.
+}

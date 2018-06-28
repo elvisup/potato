@@ -1,0 +1,12 @@
+syntax = "proto3"; 
+
+package sputnik.pb;
+
+import "item.proto";
+
+message FrameResult {
+  int32 frame_id = 1;  // only meaningful if there's only one video channel
+  repeated Item items = 2; 
+  bool DEPRECATED_end = 3;
+  string version = 4;
+}

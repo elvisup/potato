@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package sputnik.pb;
+
+import "cluster.proto";
+
+message ClusterReply {
+  repeated Cluster clusters = 1;
+};

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package sputnik.pb;
+
+import "face_reply.proto";
+import "token_reply.proto";
+
+message MegReply {
+  int32 request_id = 1;
+  string error_message = 2;
+  oneof content {
+    FaceReply face_reply  = 3;
+    TokenActivationReply token_activation_replay = 4;
+    DeleteTokenReply delete_token_reply = 5;
+  }
+}

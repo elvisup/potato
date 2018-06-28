@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package demo;
+message People {
+	string name = 1;
+	int32 id = 2;
+	string email = 3;
+
+	message PAttr {
+		int32 age = 1;
+		int32 gender = 2;
+	}
+
+	repeated PAttr people_attr = 4;
+}  
