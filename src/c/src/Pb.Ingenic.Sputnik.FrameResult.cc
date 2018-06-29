@@ -59,6 +59,47 @@ int Pb_Ingenic_Sputnik_FrameResult_Get_Items(int index, items_attr_t *attr)
 	attr->items_track_show = items.track_show();
 	attr->items_track_push = items.track_push();
 	attr->items_timestamp_millis = items.timestamp_millis();
+	attr->box.valid = items.has_box();
+	if (attr->box.valid) {
+		//printf("This items has box!\n");
+		sputnik::pb::Box box = items.box();
+		attr->box.x = box.x();
+		attr->box.y = box.y();
+		attr->box.w = box.w();
+		attr->box.h = box.h();
+	}
+
+	//Face
+	if (attr->items_type == 0) {
+		sputnik::pb::FaceAttribute face_attr = items.face_attribute();
+		attr->face_attr.blur = face_attr.blur();
+		attr->face_attr.age = face_attr.age();
+		attr->face_attr.gender = face_attr.gender();
+		attr->face_attr.pitch = face_attr.pitch();
+		attr->face_attr.yaw = face_attr.yaw();
+		attr->face_attr.roll = face_attr.roll();
+		attr->face_attr.post_filter_score = face_attr.post_filter_score();
+		attr->face_attr.minority = face_attr.minority();
+
+		sputnik::pb::FaceLandMark face_landmark = face_attr.landmark();
+
+		//Face Landmark
+		//attr->face_attr.landmark.landmark_description;
+		attr->face_attr.landmark.lefteye_pupil_x = face_landmark.lefteye_pupil_x();
+		attr->face_attr.landmark.lefteye_pupil_y = face_landmark.lefteye_pupil_y();
+		attr->face_attr.landmark.righteye_pupil_x = face_landmark.righteye_pupil_x();
+		attr->face_attr.landmark.righteye_pupil_y = face_landmark.righteye_pupil_y();
+		attr->face_attr.landmark.nose_tip_x = face_landmark.nose_tip_x();
+		attr->face_attr.landmark.nose_tip_y = face_landmark.nose_tip_y();
+		attr->face_attr.landmark.left_mouth_corner_x = face_landmark.left_mouth_corner_x();
+		attr->face_attr.landmark.left_mouth_corner_y = face_landmark.left_mouth_corner_y();
+		attr->face_attr.landmark.right_mouth_corner_x = face_landmark.right_mouth_corner_x();
+		attr->face_attr.landmark.right_mouth_corner_y = face_landmark.right_mouth_corner_y();
+		attr->face_attr.landmark.lefteye_right_corner_x = face_landmark.lefteye_right_corner_x();
+		attr->face_attr.landmark.lefteye_right_corner_y = face_landmark.lefteye_right_corner_y();
+		attr->face_attr.landmark.righteye_left_corner_x = face_landmark.righteye_left_corner_x();
+		attr->face_attr.landmark.righteye_left_corner_y = face_landmark.righteye_left_corner_y();
+	}
 
 	return 0;
 }

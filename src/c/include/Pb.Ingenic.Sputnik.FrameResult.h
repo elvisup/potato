@@ -1,6 +1,9 @@
 #ifndef __PB_INGENIC_SPUTNIK_FRAMERESULT_H__
 #define __PB_INGENIC_SPUTNIK_FRAMERESULT_H__
 
+#include "inc/Pb.Sputnik.Box.h"
+#include "inc/Pb.Sputnik.FaceAttribute.h"
+
 #ifdef __cplusplus
 #if __cplusplus
 extern "C"
@@ -10,9 +13,7 @@ extern "C"
 
 typedef struct __items_attr {
 	int items_type;
-	/*
-	 *Box box = 2;
-	 */
+	box_t box;
 	int items_video_channel_id;
 	int items_frame_id;
 	int items_track_id;
@@ -20,6 +21,8 @@ typedef struct __items_attr {
 	bool items_track_die;
 	bool items_track_show;
 	bool items_track_push;
+
+	face_attribute_t face_attr;
 
 	/*
 	 *oneof attribute {
