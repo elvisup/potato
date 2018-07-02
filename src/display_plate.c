@@ -154,6 +154,8 @@ int main(int argc, char **argv)
 
 					sprintf(buf, "\t\t\titems face blur : %d\n", attr.face_attr.blur);
 					assemble_format_data(strlen(buf), buf, parse_buf, 0); memset(buf, 0x0, 1024);
+					sprintf(buf, "\t\t\titems face age : %d\n", attr.face_attr.age);
+					assemble_format_data(strlen(buf), buf, parse_buf, 0); memset(buf, 0x0, 1024);
 					sprintf(buf, "\t\t\titems face gender : %d\n", attr.face_attr.gender);
 					assemble_format_data(strlen(buf), buf, parse_buf, 0); memset(buf, 0x0, 1024);
 					sprintf(buf, "\t\t\titems face pitch : %d\n", attr.face_attr.pitch);
