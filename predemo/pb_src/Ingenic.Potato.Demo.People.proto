@@ -1,6 +1,17 @@
 syntax = "proto3";
 
 package demo;
+
+message Oftest0 {
+	int32 oka = 1;
+	int32 okb = 2;
+}
+
+message Oftest1 {
+	int32 oka = 1;
+	int32 okb = 2;
+}
+
 message People {
 	string name = 1;
 	int32 id = 2;
@@ -12,4 +23,11 @@ message People {
 	}
 
 	repeated PAttr people_attr = 4;
+
+	oneof ofst {
+		Oftest0 test0 = 5;
+		Oftest1 test1 = 6;
+	}
+
+	bytes data = 7;
 }  

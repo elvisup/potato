@@ -2,7 +2,13 @@
 #define __PB_INGENIC_SPUTNIK_FRAMERESULT_H__
 
 #include "inc/Pb.Sputnik.Box.h"
+#include "inc/Pb.Sputnik.Mask.h"
+#include "inc/Pb.Sputnik.Image.h"
 #include "inc/Pb.Sputnik.FaceAttribute.h"
+#include "inc/Pb.Sputnik.PlateAttribute.h"
+#include "inc/Pb.Sputnik.TracePoint.h"
+#include "inc/Pb.Sputnik.VehicleAttribute.h"
+#include "inc/Pb.Sputnik.HumanAttribute.h"
 
 #ifdef __cplusplus
 #if __cplusplus
@@ -10,6 +16,19 @@ extern "C"
 {
 #endif
 #endif
+
+#define MAX_TRACEPOINT_CNT 256
+
+enum ItemType {
+  // Human face
+  FACE = 0,
+  // License plate
+  PLATE = 1,
+  // Vehicle
+  VEHICLE = 2,
+  // Human
+  HUMAN = 3,
+};
 
 typedef struct __items_attr {
 	int items_type;
@@ -23,33 +42,22 @@ typedef struct __items_attr {
 	bool items_track_push;
 
 	face_attribute_t face_attr;
+	plate_attribute_t plate_attribute;
+	vehicle_attribute_t vehicle_attribute;
+	human_attribute_t human_attribute;
 
-	/*
-	 *oneof attribute {
-	 *        FaceAttribute face_attribute = 9;
-	 *        PlateAttribute plate_attribute = 10;
-	 *        VehicleAttribute vehicle_attribute = 11;
-	 *        HumanAttribute human_attribute = 13;
-	 *}
-	 *Image item_image = 12;
-	 */
-	/*
-	 *Mask mask = 14;
-	 */
+	image_t item_image;
+	mask_t mask;
 
 	unsigned long long items_timestamp_millis;
 
-	/*
-	 *repeated TracePoint trace = 16;
-	 */
+	int trace_point_cnt;
+	trace_point_t trace[MAX_TRACEPOINT_CNT];
 
-	/*
-	 *string item_text_utf8 = 17;
-	 */
+	char item_text_utf8[256];
 
-	/*
-	 *bytes blob = 18;
-	 */
+	int blob_size;
+	char *blob;
 
 } items_attr_t;
 

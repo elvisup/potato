@@ -41,7 +41,8 @@ OBJS := $(TOPDIR)/../pb_dst/box.pb.o \
  	$(TOPDIR)/../pb_dst/token_request.pb.o \
  	$(TOPDIR)/../pb_dst/trace_point.pb.o \
  	$(TOPDIR)/../pb_dst/vehicle_attribute.pb.o \
-	$(TOPDIR)/src/Pb.Ingenic.Sputnik.FrameResult.o
+	$(TOPDIR)/src/Pb.Ingenic.Sputnik.FrameResult.o \
+	$(TOPDIR)/src/Pb.Ingenic.Sputnik.MegRequest.o
 
 
 ifeq ($(LIBTYPE), muclibc)

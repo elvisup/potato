@@ -16,6 +16,7 @@
 
 using namespace std;
 
+string bindata(1024, '\0');
 int main()
 {
 #if 1
@@ -58,11 +59,25 @@ int main()
 			pattr = p.add_people_attr();
 			cout << p.people_attr_size() << endl;
 
+			demo::Oftest0 *oft_0 = p.mutable_test0();
+			oft_0->set_oka(10086);
+			oft_0->set_okb(10087);
+
 			p.set_name("Elvis Wang");
 			p.set_id(9);
 			p.set_email("huan.wang@inegnic.com");
 			pattr->set_age(18);;
 			pattr->set_gender(3000);;
+
+			//char binbuf[128] = "01234567899876543210\n";
+			char *binbuf = (char *)malloc(128);
+			memset(binbuf, 0x44, 128);
+			//bindata = binbuf;
+			//printf("bindata: %p, binbuf: %p\n", bindata.c_str(), binbuf);
+			//bindata.copy(binbuf,0,strlen(binbuf));
+			//strncpy(bindata, binbuf, strlen(binbuf));
+			p.set_data(binbuf);
+
 			p.SerializeToString(&data);
 			char bts[data.length()];
 			strcpy(bts, data.c_str());

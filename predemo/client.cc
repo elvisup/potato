@@ -49,12 +49,19 @@ int main(int argc, char ** argv)
 	cout << p.people_attr_size() << endl;
 	demo::People::PAttr pattr = p.people_attr(0);
 
+	demo::Oftest0 *oft_0 = p.mutable_test0();
+
 	cout << "People: " << endl;  
 	cout << "Name: " << p.name() << endl;  
 	cout << "ID: " << p.id() << endl;  
 	cout << "Email: " << p.email() << endl;  
 	cout << "age: " << pattr.age() << endl;
 	cout << "genger: " << pattr.gender() << endl;
+	cout << "has test0: " << p.has_test0() << endl;
+	cout << "has test1: " << p.has_test1() << endl;
+	cout << "oka: " << oft_0->oka() << endl;
+	cout << "okb: " << oft_0->okb() << endl;
+	cout << "data: " << p.data() << endl;
 
 #if 0
 	ofstream ofile;

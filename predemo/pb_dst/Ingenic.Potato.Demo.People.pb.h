@@ -38,7 +38,7 @@ namespace protobuf_Ingenic_2ePotato_2eDemo_2ePeople_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[2];
+  static const ::google::protobuf::internal::ParseTable schema[4];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -46,6 +46,12 @@ struct TableStruct {
 void AddDescriptors();
 }  // namespace protobuf_Ingenic_2ePotato_2eDemo_2ePeople_2eproto
 namespace demo {
+class Oftest0;
+class Oftest0DefaultTypeInternal;
+extern Oftest0DefaultTypeInternal _Oftest0_default_instance_;
+class Oftest1;
+class Oftest1DefaultTypeInternal;
+extern Oftest1DefaultTypeInternal _Oftest1_default_instance_;
 class People;
 class PeopleDefaultTypeInternal;
 extern PeopleDefaultTypeInternal _People_default_instance_;
@@ -55,6 +61,8 @@ extern People_PAttrDefaultTypeInternal _People_PAttr_default_instance_;
 }  // namespace demo
 namespace google {
 namespace protobuf {
+template<> ::demo::Oftest0* Arena::CreateMaybeMessage<::demo::Oftest0>(Arena*);
+template<> ::demo::Oftest1* Arena::CreateMaybeMessage<::demo::Oftest1>(Arena*);
 template<> ::demo::People* Arena::CreateMaybeMessage<::demo::People>(Arena*);
 template<> ::demo::People_PAttr* Arena::CreateMaybeMessage<::demo::People_PAttr>(Arena*);
 }  // namespace protobuf
@@ -62,6 +70,226 @@ template<> ::demo::People_PAttr* Arena::CreateMaybeMessage<::demo::People_PAttr>
 namespace demo {
 
 // ===================================================================
+
+class Oftest0 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:demo.Oftest0) */ {
+ public:
+  Oftest0();
+  virtual ~Oftest0();
+
+  Oftest0(const Oftest0& from);
+
+  inline Oftest0& operator=(const Oftest0& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Oftest0(Oftest0&& from) noexcept
+    : Oftest0() {
+    *this = ::std::move(from);
+  }
+
+  inline Oftest0& operator=(Oftest0&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Oftest0& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Oftest0* internal_default_instance() {
+    return reinterpret_cast<const Oftest0*>(
+               &_Oftest0_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  void Swap(Oftest0* other);
+  friend void swap(Oftest0& a, Oftest0& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Oftest0* New() const final {
+    return CreateMaybeMessage<Oftest0>(NULL);
+  }
+
+  Oftest0* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Oftest0>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Oftest0& from);
+  void MergeFrom(const Oftest0& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Oftest0* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 oka = 1;
+  void clear_oka();
+  static const int kOkaFieldNumber = 1;
+  ::google::protobuf::int32 oka() const;
+  void set_oka(::google::protobuf::int32 value);
+
+  // int32 okb = 2;
+  void clear_okb();
+  static const int kOkbFieldNumber = 2;
+  ::google::protobuf::int32 okb() const;
+  void set_okb(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:demo.Oftest0)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 oka_;
+  ::google::protobuf::int32 okb_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_Ingenic_2ePotato_2eDemo_2ePeople_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Oftest1 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:demo.Oftest1) */ {
+ public:
+  Oftest1();
+  virtual ~Oftest1();
+
+  Oftest1(const Oftest1& from);
+
+  inline Oftest1& operator=(const Oftest1& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Oftest1(Oftest1&& from) noexcept
+    : Oftest1() {
+    *this = ::std::move(from);
+  }
+
+  inline Oftest1& operator=(Oftest1&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Oftest1& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Oftest1* internal_default_instance() {
+    return reinterpret_cast<const Oftest1*>(
+               &_Oftest1_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(Oftest1* other);
+  friend void swap(Oftest1& a, Oftest1& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Oftest1* New() const final {
+    return CreateMaybeMessage<Oftest1>(NULL);
+  }
+
+  Oftest1* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Oftest1>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Oftest1& from);
+  void MergeFrom(const Oftest1& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Oftest1* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // int32 oka = 1;
+  void clear_oka();
+  static const int kOkaFieldNumber = 1;
+  ::google::protobuf::int32 oka() const;
+  void set_oka(::google::protobuf::int32 value);
+
+  // int32 okb = 2;
+  void clear_okb();
+  static const int kOkbFieldNumber = 2;
+  ::google::protobuf::int32 okb() const;
+  void set_okb(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:demo.Oftest1)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 oka_;
+  ::google::protobuf::int32 okb_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_Ingenic_2ePotato_2eDemo_2ePeople_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
 
 class People_PAttr : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:demo.People.PAttr) */ {
  public:
@@ -98,7 +326,7 @@ class People_PAttr : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_People_PAttr_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    2;
 
   void Swap(People_PAttr* other);
   friend void swap(People_PAttr& a, People_PAttr& b) {
@@ -202,13 +430,19 @@ class People : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   static const ::google::protobuf::Descriptor* descriptor();
   static const People& default_instance();
 
+  enum OfstCase {
+    kTest0 = 5,
+    kTest1 = 6,
+    OFST_NOT_SET = 0,
+  };
+
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
   static inline const People* internal_default_instance() {
     return reinterpret_cast<const People*>(
                &_People_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    3;
 
   void Swap(People* other);
   friend void swap(People& a, People& b) {
@@ -302,21 +536,74 @@ class People : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::std::string* release_email();
   void set_allocated_email(::std::string* email);
 
+  // bytes data = 7;
+  void clear_data();
+  static const int kDataFieldNumber = 7;
+  const ::std::string& data() const;
+  void set_data(const ::std::string& value);
+  #if LANG_CXX11
+  void set_data(::std::string&& value);
+  #endif
+  void set_data(const char* value);
+  void set_data(const void* value, size_t size);
+  ::std::string* mutable_data();
+  ::std::string* release_data();
+  void set_allocated_data(::std::string* data);
+
   // int32 id = 2;
   void clear_id();
   static const int kIdFieldNumber = 2;
   ::google::protobuf::int32 id() const;
   void set_id(::google::protobuf::int32 value);
 
+  // .demo.Oftest0 test0 = 5;
+  bool has_test0() const;
+  void clear_test0();
+  static const int kTest0FieldNumber = 5;
+  private:
+  const ::demo::Oftest0& _internal_test0() const;
+  public:
+  const ::demo::Oftest0& test0() const;
+  ::demo::Oftest0* release_test0();
+  ::demo::Oftest0* mutable_test0();
+  void set_allocated_test0(::demo::Oftest0* test0);
+
+  // .demo.Oftest1 test1 = 6;
+  bool has_test1() const;
+  void clear_test1();
+  static const int kTest1FieldNumber = 6;
+  private:
+  const ::demo::Oftest1& _internal_test1() const;
+  public:
+  const ::demo::Oftest1& test1() const;
+  ::demo::Oftest1* release_test1();
+  ::demo::Oftest1* mutable_test1();
+  void set_allocated_test1(::demo::Oftest1* test1);
+
+  void clear_ofst();
+  OfstCase ofst_case() const;
   // @@protoc_insertion_point(class_scope:demo.People)
  private:
+  void set_has_test0();
+  void set_has_test1();
+
+  inline bool has_ofst() const;
+  inline void clear_has_ofst();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::demo::People_PAttr > people_attr_;
   ::google::protobuf::internal::ArenaStringPtr name_;
   ::google::protobuf::internal::ArenaStringPtr email_;
+  ::google::protobuf::internal::ArenaStringPtr data_;
   ::google::protobuf::int32 id_;
+  union OfstUnion {
+    OfstUnion() {}
+    ::demo::Oftest0* test0_;
+    ::demo::Oftest1* test1_;
+  } ofst_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint32 _oneof_case_[1];
+
   friend struct ::protobuf_Ingenic_2ePotato_2eDemo_2ePeople_2eproto::TableStruct;
 };
 // ===================================================================
@@ -328,6 +615,70 @@ class People : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// Oftest0
+
+// int32 oka = 1;
+inline void Oftest0::clear_oka() {
+  oka_ = 0;
+}
+inline ::google::protobuf::int32 Oftest0::oka() const {
+  // @@protoc_insertion_point(field_get:demo.Oftest0.oka)
+  return oka_;
+}
+inline void Oftest0::set_oka(::google::protobuf::int32 value) {
+  
+  oka_ = value;
+  // @@protoc_insertion_point(field_set:demo.Oftest0.oka)
+}
+
+// int32 okb = 2;
+inline void Oftest0::clear_okb() {
+  okb_ = 0;
+}
+inline ::google::protobuf::int32 Oftest0::okb() const {
+  // @@protoc_insertion_point(field_get:demo.Oftest0.okb)
+  return okb_;
+}
+inline void Oftest0::set_okb(::google::protobuf::int32 value) {
+  
+  okb_ = value;
+  // @@protoc_insertion_point(field_set:demo.Oftest0.okb)
+}
+
+// -------------------------------------------------------------------
+
+// Oftest1
+
+// int32 oka = 1;
+inline void Oftest1::clear_oka() {
+  oka_ = 0;
+}
+inline ::google::protobuf::int32 Oftest1::oka() const {
+  // @@protoc_insertion_point(field_get:demo.Oftest1.oka)
+  return oka_;
+}
+inline void Oftest1::set_oka(::google::protobuf::int32 value) {
+  
+  oka_ = value;
+  // @@protoc_insertion_point(field_set:demo.Oftest1.oka)
+}
+
+// int32 okb = 2;
+inline void Oftest1::clear_okb() {
+  okb_ = 0;
+}
+inline ::google::protobuf::int32 Oftest1::okb() const {
+  // @@protoc_insertion_point(field_get:demo.Oftest1.okb)
+  return okb_;
+}
+inline void Oftest1::set_okb(::google::protobuf::int32 value) {
+  
+  okb_ = value;
+  // @@protoc_insertion_point(field_set:demo.Oftest1.okb)
+}
+
+// -------------------------------------------------------------------
+
 // People_PAttr
 
 // int32 age = 1;
@@ -512,9 +863,163 @@ People::people_attr() const {
   return people_attr_;
 }
 
+// .demo.Oftest0 test0 = 5;
+inline bool People::has_test0() const {
+  return ofst_case() == kTest0;
+}
+inline void People::set_has_test0() {
+  _oneof_case_[0] = kTest0;
+}
+inline void People::clear_test0() {
+  if (has_test0()) {
+    delete ofst_.test0_;
+    clear_has_ofst();
+  }
+}
+inline const ::demo::Oftest0& People::_internal_test0() const {
+  return *ofst_.test0_;
+}
+inline ::demo::Oftest0* People::release_test0() {
+  // @@protoc_insertion_point(field_release:demo.People.test0)
+  if (has_test0()) {
+    clear_has_ofst();
+      ::demo::Oftest0* temp = ofst_.test0_;
+    ofst_.test0_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::demo::Oftest0& People::test0() const {
+  // @@protoc_insertion_point(field_get:demo.People.test0)
+  return has_test0()
+      ? *ofst_.test0_
+      : *reinterpret_cast< ::demo::Oftest0*>(&::demo::_Oftest0_default_instance_);
+}
+inline ::demo::Oftest0* People::mutable_test0() {
+  if (!has_test0()) {
+    clear_ofst();
+    set_has_test0();
+    ofst_.test0_ = CreateMaybeMessage< ::demo::Oftest0 >(
+        GetArenaNoVirtual());
+  }
+  // @@protoc_insertion_point(field_mutable:demo.People.test0)
+  return ofst_.test0_;
+}
+
+// .demo.Oftest1 test1 = 6;
+inline bool People::has_test1() const {
+  return ofst_case() == kTest1;
+}
+inline void People::set_has_test1() {
+  _oneof_case_[0] = kTest1;
+}
+inline void People::clear_test1() {
+  if (has_test1()) {
+    delete ofst_.test1_;
+    clear_has_ofst();
+  }
+}
+inline const ::demo::Oftest1& People::_internal_test1() const {
+  return *ofst_.test1_;
+}
+inline ::demo::Oftest1* People::release_test1() {
+  // @@protoc_insertion_point(field_release:demo.People.test1)
+  if (has_test1()) {
+    clear_has_ofst();
+      ::demo::Oftest1* temp = ofst_.test1_;
+    ofst_.test1_ = NULL;
+    return temp;
+  } else {
+    return NULL;
+  }
+}
+inline const ::demo::Oftest1& People::test1() const {
+  // @@protoc_insertion_point(field_get:demo.People.test1)
+  return has_test1()
+      ? *ofst_.test1_
+      : *reinterpret_cast< ::demo::Oftest1*>(&::demo::_Oftest1_default_instance_);
+}
+inline ::demo::Oftest1* People::mutable_test1() {
+  if (!has_test1()) {
+    clear_ofst();
+    set_has_test1();
+    ofst_.test1_ = CreateMaybeMessage< ::demo::Oftest1 >(
+        GetArenaNoVirtual());
+  }
+  // @@protoc_insertion_point(field_mutable:demo.People.test1)
+  return ofst_.test1_;
+}
+
+// bytes data = 7;
+inline void People::clear_data() {
+  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& People::data() const {
+  // @@protoc_insertion_point(field_get:demo.People.data)
+  return data_.GetNoArena();
+}
+inline void People::set_data(const ::std::string& value) {
+  
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:demo.People.data)
+}
+#if LANG_CXX11
+inline void People::set_data(::std::string&& value) {
+  
+  data_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:demo.People.data)
+}
+#endif
+inline void People::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:demo.People.data)
+}
+inline void People::set_data(const void* value, size_t size) {
+  
+  data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:demo.People.data)
+}
+inline ::std::string* People::mutable_data() {
+  
+  // @@protoc_insertion_point(field_mutable:demo.People.data)
+  return data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* People::release_data() {
+  // @@protoc_insertion_point(field_release:demo.People.data)
+  
+  return data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void People::set_allocated_data(::std::string* data) {
+  if (data != NULL) {
+    
+  } else {
+    
+  }
+  data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), data);
+  // @@protoc_insertion_point(field_set_allocated:demo.People.data)
+}
+
+inline bool People::has_ofst() const {
+  return ofst_case() != OFST_NOT_SET;
+}
+inline void People::clear_has_ofst() {
+  _oneof_case_[0] = OFST_NOT_SET;
+}
+inline People::OfstCase People::ofst_case() const {
+  return People::OfstCase(_oneof_case_[0]);
+}
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 
