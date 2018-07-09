@@ -2,3 +2,13 @@
 
 echo "Genarate *.cc & *.h from *.proto"
 ../pb/bin/protoc -I=./pb_src --cpp_out=./pb_dst ./pb_src/*.proto
+
+echo "Genarate proto library"
+cd c/
+make clean
+make
+
+echo "Genarate test app"
+cd ../
+make clean
+make
